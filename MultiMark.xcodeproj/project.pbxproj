@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DED1999A866B657B5838F7D /* Pods_MultiMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6193CBB1EF4F619C4DBF0233 /* Pods_MultiMark.framework */; };
 		2D00437F225C645C001D0832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D00437E225C645C001D0832 /* AppDelegate.swift */; };
 		2D004381225C645C001D0832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D004380225C645C001D0832 /* ViewController.swift */; };
 		2D004384225C645C001D0832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D004382225C645C001D0832 /* Main.storyboard */; };
 		2D004386225C645E001D0832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D004385225C645E001D0832 /* Assets.xcassets */; };
 		2D004389225C645E001D0832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D004387225C645E001D0832 /* LaunchScreen.storyboard */; };
+		2DD2DAC5225C8C5A00827B4F /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2DAC4225C8C5A00827B4F /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		2D004385225C645E001D0832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D004388225C645E001D0832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D00438A225C645E001D0832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD2DAC4225C8C5A00827B4F /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		6193CBB1EF4F619C4DBF0233 /* Pods_MultiMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C020F890B2000E51EC260A /* Pods-MultiMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiMark.debug.xcconfig"; path = "Target Support Files/Pods-MultiMark/Pods-MultiMark.debug.xcconfig"; sourceTree = "<group>"; };
+		A1150C83A61B6E63D440C1C4 /* Pods-MultiMark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiMark.release.xcconfig"; path = "Target Support Files/Pods-MultiMark/Pods-MultiMark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DED1999A866B657B5838F7D /* Pods_MultiMark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B49515E3787DF4AAFE7207 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67C020F890B2000E51EC260A /* Pods-MultiMark.debug.xcconfig */,
+				A1150C83A61B6E63D440C1C4 /* Pods-MultiMark.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2D004372225C645C001D0832 = {
 			isa = PBXGroup;
 			children = (
 				2D00437D225C645C001D0832 /* MultiMark */,
 				2D00437C225C645C001D0832 /* Products */,
+				21B49515E3787DF4AAFE7207 /* Pods */,
+				83E06654E05F03F6E8B23449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +75,20 @@
 				2D00437E225C645C001D0832 /* AppDelegate.swift */,
 				2D004380225C645C001D0832 /* ViewController.swift */,
 				2D004382225C645C001D0832 /* Main.storyboard */,
+				2DD2DAC4225C8C5A00827B4F /* PreviewViewController.swift */,
 				2D004385225C645E001D0832 /* Assets.xcassets */,
 				2D004387225C645E001D0832 /* LaunchScreen.storyboard */,
 				2D00438A225C645E001D0832 /* Info.plist */,
 			);
 			path = MultiMark;
+			sourceTree = "<group>";
+		};
+		83E06654E05F03F6E8B23449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6193CBB1EF4F619C4DBF0233 /* Pods_MultiMark.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D00438D225C645E001D0832 /* Build configuration list for PBXNativeTarget "MultiMark" */;
 			buildPhases = (
+				66699A3740C7DCA3BEEA22B3 /* [CP] Check Pods Manifest.lock */,
 				2D004377225C645C001D0832 /* Sources */,
 				2D004378225C645C001D0832 /* Frameworks */,
 				2D004379225C645C001D0832 /* Resources */,
+				EF14251C60F7A173FC0689B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66699A3740C7DCA3BEEA22B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiMark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF14251C60F7A173FC0689B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiMark/Pods-MultiMark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiMark/Pods-MultiMark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D004377225C645C001D0832 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +213,7 @@
 			files = (
 				2D004381225C645C001D0832 /* ViewController.swift in Sources */,
 				2D00437F225C645C001D0832 /* AppDelegate.swift in Sources */,
+				2DD2DAC5225C8C5A00827B4F /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +357,7 @@
 		};
 		2D00438E225C645E001D0832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C020F890B2000E51EC260A /* Pods-MultiMark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +376,7 @@
 		};
 		2D00438F225C645E001D0832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1150C83A61B6E63D440C1C4 /* Pods-MultiMark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
