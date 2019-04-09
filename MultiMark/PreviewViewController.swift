@@ -15,7 +15,8 @@ class PreviewViewController: UIViewController {
     var text: String = "" {
         didSet {
             let down = Down(markdownString: text)
-            let attributedString = try? down.toAttributedString()
+            let style = "body { font: 200% sans-serif; }"
+            let attributedString = try? down.toAttributedString(stylesheet: style)
             outputView.attributedText = attributedString
         }
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var textView: UITextView!
     var additionalWindows = [UIWindow]()
     
@@ -32,6 +32,12 @@ class ViewController: UIViewController {
             newWindow.isHidden = false
             self.additionalWindows.append(newWindow)
         }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        guard let preview = additionalWindows.first?.rootViewController as? PreviewViewController else { return }
+        
+        preview.text = textView.text
     }
 
 
