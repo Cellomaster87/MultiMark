@@ -9,14 +9,26 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let split = window?.rootViewController as? UISplitViewController {
+            split.delegate = self
+            // to support iPhones that do not support splitView natively
+            split.preferredDisplayMode = .allVisible
+            // make our editing window bigger
+            split.maximumPrimaryColumnWidth = .greatestFiniteMagnitude
+            split.preferredPrimaryColumnWidthFraction = 0.5
+        }
+        
         return true
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true // do nothing with the secondary view controller
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

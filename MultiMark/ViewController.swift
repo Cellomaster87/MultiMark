@@ -58,9 +58,6 @@ class ViewController: UIViewController, UITextViewDelegate {
                 preview.text = textView.text 
             }
         }
-        
     }
-
-
 }
 
